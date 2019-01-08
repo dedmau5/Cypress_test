@@ -1,0 +1,14 @@
+{
+  "name": "cypress_test",
+  "version": "1.0.0",
+  "description": "POC Cypress.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "cy_test"
+  },
+  "author": "dedmau5",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^3.1.4"
+  }
+}
