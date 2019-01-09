@@ -11,5 +11,16 @@ describe('My First Test', function() {
         cy.get('.action-email')
         .type('fake@email.com')
         .should('have.value', 'fake@email.com');
+
+        //Get password input, type into it
+        cy.get('.action-focus')
+        .type('test');
+
+        //Get blur-field and type in it
+        cy.get('.action-blur')
+        .type('Again, it is all a test');
+
+        //get clear-field and type in it
+        cy.get('.action-clear')
     })
   })
