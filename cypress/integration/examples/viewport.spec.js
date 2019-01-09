@@ -45,8 +45,8 @@ context('Viewport', () => {
     cy.wait(200)
     cy.viewport('iphone-3')
     cy.wait(200)
-    cy.viewport('surface-book')
-    cy.wait(200)
+    //cy.viewport('surface-book')
+    //cy.wait(200)
 
     // cy.viewport() accepts an orientation for all presets
     // the default orientation is 'portrait'
