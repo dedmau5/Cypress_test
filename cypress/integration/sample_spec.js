@@ -16,6 +16,8 @@ describe('My First Test', function() {
         cy.get('.action-focus')
         .type('test');
 
+        cy.pause();
+
         //Get blur-field and type in it
         cy.get('.action-blur')
         .type('Again, it is all a test');
