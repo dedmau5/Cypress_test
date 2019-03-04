@@ -9,8 +9,11 @@ describe('Find how to contact certain squeeders', function() {
         cy.url().should('include', 'hela-kursutbudet');
 
         //Click on the first 'Mer info'-button
-        cy.get('body > div > div:nth-child(3) > div > div > div:nth-child(1) > div:nth-child(3) > div > div.col-12.col-md-4.no-padding > a').click();
+        //cy.get('div > a').click();
+        cy.contains('Mer info').click();
        
+        //body > div > div:nth-child(3) > div > div > div:nth-child(1)
+        //body > div > div:nth-child(3) > div > div > div:nth-child(1) > div:nth-child(3) > div > div.col-12.col-md-4.no-padding > a
 
 
 
