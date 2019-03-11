@@ -4,6 +4,7 @@ describe('Find how to contact certain squeeders', function() {
         cy.visit('https://www.squeed.com');
 
         cy.get('#navbarDropdown').click();
+        //uncomment the corresponding optins
         cy.contains('Logga in').click();
         //cy.contains('Glömt lösenord').click();
         //cy.contains('Begär inloggning').click();
@@ -16,8 +17,11 @@ describe('Find how to contact certain squeeders', function() {
         cy.get('#Password').type('Vinter56');
         cy.get('form').submit();//        body > div > div > div > div.col > form > input.btn.btn-primary
 
-        cy.get('#navbarDropdownPortfolio > i > #text').should('contain', 'Joar E');
+        //cy.get('#navbarDropdownPortfolio').should('contain', 'Joar E');
+        //cy.get('[id*="navbarDropdownPortfolio"]').contains('Joar E');
+        cy.get('[id="navbarDropdownPortfolio"]').should('contain', 'Joar E');
         //#navbarDropdownPortfolio > i
+        // .get(‘[class*=“fs-button_PhoneNumber”]‘).contains(‘+46 77 0’).click() 
         
 
     })
