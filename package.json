@@ -1,7 +1,9 @@
 {
   "name": "cypress_test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "POC Cypress.io",
+  "author": "dedmau5",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/dedmau5/Cypress_test"
@@ -11,9 +13,7 @@
     "test": "cy_test",
     "cyop": "cypress open"
   },
-  "author": "dedmau5",
-  "license": "MIT",
   "devDependencies": {
-    "cypress": "^3.1.5"
+    "cypress": "^3.4.1"
   }
 }

@@ -20,5 +20,6 @@ describe('Find how to contact certain squeeders', function() {
 
         //assert that user Joar E is logged in
         cy.get('[id*="navbarDropdownPortfolio"]').should('contain', 'Joar E');
+        
     })
   })
