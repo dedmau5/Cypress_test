@@ -5,11 +5,21 @@ describe('Testing the login function on minuc.se', function() {
             .get('.site-header__top .btn').click()
             //.contains('#UP')
             .url().should('include', 'weblogin/login?')
+            
             .get('#UP').click()
             .get('#username.form-control').type('198409296376')
             .get('#password.form-control').type('testMinuc2')
             .get('form').submit()
-            .get('list-group-item')
+            //.contains('Privattjänster').click()
+            .url().should('include', 'weblogin/uploginhandler')
+            
+            .get('div:nth-child(2) > div > div > div > a:nth-child(1)').click()
+            .url().should('include', 'mina-tjanster')
+            .get('#userdropdown').click()
+            .get('.signout').click()
+            .get('.site-header__top .btn').should('be.visible')
+            
+
 
         /* cy.get('#navbarDropdown').click();
 
