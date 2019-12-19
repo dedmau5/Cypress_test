@@ -1,5 +1,5 @@
 describe('My First Test', function() {
-    it('clicks content "type" and navigates to new url ', function() {
+    it.skip('clicks content "type" and navigates to new url ', function() {
         cy.visit('https://example.cypress.io')
 
         cy.contains('type').click();
