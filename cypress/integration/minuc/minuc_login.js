@@ -15,9 +15,6 @@ describe('Testing the login function on minuc.se', function() {
             
             .get('div:nth-child(2) > div > div > div > a:nth-child(1)').click()
             .url().should('include', 'mina-tjanster')
-            .get('#userdropdown').click()
-            .get('.signout').click()
-            .get('.site-header__top .btn').should('be.visible')
-        
+            
     })
   })
