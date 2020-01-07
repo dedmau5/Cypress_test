@@ -1,5 +1,5 @@
-describe('Testing the login function on minuc.se', function() {
-    it('Goto minuc-at-url, click login button and log in', function() {
+describe('Goto Kreditkollen', function() {
+    it('Goto minuc-at-url, click login button and follow login-flow, click Kreditkollen and verify you are in the correct place', function() {
         //cy.viewport(1280, 800)        
         cy.visit('https://www1.minuc.se')
             .get('.site-header__top .btn').click()
