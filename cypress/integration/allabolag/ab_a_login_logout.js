@@ -17,8 +17,6 @@ describe('Testing happy-flow Allabolag, login, verify state and then logout', fu
             
             .url().should('include', '/konto?')
             
-            
-            
             /*.get("iframe").then(($iframe) => {
                 const doc = $iframe.contents()
                 doc.find('div.container > div > button').click()
