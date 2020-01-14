@@ -44,7 +44,36 @@ Cypress.Commands.add("iframeLoaded", { prevSubject: 'element' },
 /* Cypress.Commands.add( 'getInDocument', { prevSubject: '#document' }, 
     (document, selector) => Cypress.$(selector, document)
 )
- */
-Cypress.Commands.add('getInDocument', { prevSubject: '#document' },
-    (document, selector) => cy.get(selector, { withinSubject: Cypress.$(selector, document) })
-  )
+
+
+Cypress.Commands.add(
+    'getInDocument', 
+    { prevSubject: '#document' },
+    (document, selector) => 
+    cy.get(selector, { withinSubject: Cypress.$(selector, document) })
+    return Cypress.$(selector, document)
+    )
+    */
+
+Cypress.Commands.add('getInDocument',
+    { prevSubject: 'document' },
+    (document, selector) => {
+        console.log("selector",selector)
+        console.log("document",document)
+        console.log("selector",selector)
+        console.log("document",document)
+        console.log("document",document.querySelector(selector))
+        console.log("document",Cypress.$(selector, document))
+        return Cypress.$(selector, document)
+})
+
+
+Cypress.Commands.add("getIframeElement", 
+    (selector, name) => { 
+        cy.get(selector)
+            .then($iframe => {
+                const $doc = $iframe.contents();
+                return cy.wrap($doc[0].body);
+        })
+        .find(name)
+ })
