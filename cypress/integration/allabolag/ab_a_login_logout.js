@@ -18,35 +18,19 @@ describe('Testing happy-flow Allabolag, login, verify state and then logout', fu
             .get('div:nth-child(2) > div > div > div > a:nth-child(1)').click()
             
             .url().should('include', '/konto?')
-            
-            .get('iframe')
-            .iframeLoaded()
-            //.itsDocument('document')
-            .getInDocument('div.container > div > button')
-            .trigger('click')
-            
 
-    /*         .get("iframe").then(($iframe) => {
-                const $doc = $iframe.contents()
-                doc.find('div.container > div > button').click()
-                
-                //doc.find('div.container > div > ul > .site-header__dropdownbutton').click()
-                //cy.wrap(doc.find('div.container > div > button')).click({force:true})
-            }) */
-            
-            /* 
             .get("iframe").then(($iframe) => {
                 const doc = $iframe.contents()
-                doc.find('div.container > div > ul > .site-header__dropdownbutton').click()
-                //cy.wrap(doc.find('div.container > div > button')).click({force:true})
+                doc.find('div.container > div > button')
+                cy.wrap(doc.find('div.container > div > button')).click(/* {force:true} */)
             })
- */
-            //doc.find('div.container > div > button').click()
-                //.get('div > div > div .site-header__backlink > a > i').click()
-                
-                //.get('.signout').click()
+            
+            .wait(2000)
 
-            //.get('.site-header__top .btn').should('be.visible')
-        
+            .get("iframe").then(($iframe) => {
+                const doc = $iframe.contents()
+                doc.find('div.container > div > ul > .site-header__dropdownbutton > a').click()
+                cy.wrap(doc.find('div.container > div > ul > .site-header__dropdownbutton > a')).click({force:true})
+            })
     })
-  })
+})
