@@ -6,8 +6,10 @@ describe('Testing happy-flow Allabolag, search function', function() {
         cy.visit('https://app-at-allabolag.platform.uc.se/')
             .get('div.tw-flex.tw-items-center.tw-flex-1 > form > div > input').type('Volvo')
             .get('form > div > button').click()
+            
             .url().should('include', 'what/Volvo')
             .get('a').contains('Volvo Car AB').click()
+            
             .url().should('include', 'volvo-car-ab')
 
     })
