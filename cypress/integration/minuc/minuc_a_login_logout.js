@@ -1,6 +1,5 @@
 describe('Testing happy-flow Minuc, login, verify state and then logout', function() {
-    it('Goto minuc-at-url, click login button and log in, verify logged in state and then log out and verify logged out state', function() {
-        //cy.viewport(1280, 800)        
+    it('Goto minuc-at-url, click login button and log in, verify logged in state and then log out and verify logged out state', function() {       
         cy.visit('https://www1.minuc.se')
             .get('.site-header__top .btn').click()
             //.contains('#UP')

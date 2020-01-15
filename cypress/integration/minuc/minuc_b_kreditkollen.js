@@ -1,6 +1,5 @@
 describe('Goto Kreditkollen', function() {
-    it('Goto minuc-at-url, click login button and follow login-flow, click Kreditkollen and verify you are in the correct place', function() {
-        //cy.viewport(1280, 800)        
+    it('Goto minuc-at-url, click login button and follow login-flow, click Kreditkollen and verify you are in the correct place', function() { 
         cy.visit('https://www1.minuc.se')
             .get('.site-header__top .btn').click()
             .url().should('include', 'weblogin/login?')
