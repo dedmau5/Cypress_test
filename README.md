@@ -2,7 +2,7 @@
 Install nodejs https://nodejs.org/en/
 
 npm install cypress
-/
-or clone this repo
+
+or clone this repo and npm install
 
 profit
