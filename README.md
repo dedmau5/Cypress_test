@@ -1,2 +1,6 @@
 # Cypress_test
-POC Cypress
+Install nodejs https://nodejs.org/en/
+
+npm install cypress
+
+profit
