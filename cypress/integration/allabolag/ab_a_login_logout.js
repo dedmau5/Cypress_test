@@ -35,6 +35,6 @@ describe('Testing happy-flow Allabolag, login, verify state and then logout', fu
             })
 
             //test ends here for now, in waiting for a possible bugfix where AT logout doesn't work the same as in PROD 
-            //JIRA BBPOR-1501
+            //JIRA BBPOR-1501 
     })
 })
