@@ -11,7 +11,8 @@ describe('Purchase when not logged in', function() {
         
         //interact with giant pop-up
         .get('body > div.order-layer > .form').should('be.visible')
-
-        
+        .get('div.order-layer > .form > div.conditions > label.conditions-policy-check-label > span').click()
+        .get('div.order-layer > .form > div.conditions > label:nth-child(4) > span').click()
+        .get('#orderProductPackeBtn').click()
     })
   })
