@@ -25,7 +25,6 @@ describe('Testing happy-flow MinBostad, login, verify state and then logout', fu
             .get('div.dropdown-header-menu > div > a').click()
             //.get('div.desktop-menu > ul.desktop-login-link > li > a').click()
             //.get('.signout').click()
-            .get('div.site-logo-container').should('be.visible')
-    
+            .get('div.site-logo-container').should('be.visible')    
     })
   })
