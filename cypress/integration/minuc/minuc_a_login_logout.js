@@ -10,8 +10,8 @@ describe('Testing happy-flow Minuc, login, verify state and then logout', functi
             .get('form').submit()
             //.contains('Privattjänster').click()
             .url().should('include', 'weblogin/uploginhandler')
+            .get('div:nth-child(2) > div > div > div > a:nth-child(2)').click()
             
-            .get('div:nth-child(2) > div > div > div > a:nth-child(1)').click()
             .url().should('include', 'mina-tjanster')
             .get('#userdropdown').click()
             .get('.signout').click()
