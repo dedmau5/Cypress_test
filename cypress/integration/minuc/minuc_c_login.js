@@ -1,6 +1,6 @@
 describe('Testing the login function on minuc.se', function() {
     //skipping this test for now due to session sometimes holding onto the login after closing, so chaining test doesn't work yet.. 
-    it.skip('Goto minuc-at-url, click login button and log in', function() {     
+    it('Goto minuc-at-url, click login button and log in', function() {     
         cy.visit('https://www1.minuc.se')
             .get('.site-header__top .btn').click()
             .url().should('include', 'weblogin/login?')
@@ -11,7 +11,7 @@ describe('Testing the login function on minuc.se', function() {
             .get('form').submit()
             .url().should('include', 'weblogin/uploginhandler')
             
-            .get('div:nth-child(2) > div > div > div > a:nth-child(1)').click()
+            .get('div:nth-child(2) > div > div > div > a:nth-child(2)').click()
             .url().should('include', 'mina-tjanster')  
     })
   })

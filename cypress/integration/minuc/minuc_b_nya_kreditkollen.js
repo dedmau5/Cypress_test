@@ -12,7 +12,7 @@ describe('Goto BETA-Kreditkollen', () => {
         cy.get('#password').type('PassPass3')
         cy.get('#loggainperson').click()
         //cy.url().should('include', 'weblogin/uploginhandler')
-        //cy.get('div:nth-child(2) > div > div > div > a:nth-child(2)').click()
+        cy.get('div:nth-child(2) > div > div > div > a:nth-child(2)').click()
     })
     
     it('confirm user is logged in', () => {

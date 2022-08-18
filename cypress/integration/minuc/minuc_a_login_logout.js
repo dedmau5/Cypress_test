@@ -1,5 +1,4 @@
-describe('Testing happy-flow Minuc, login, verify state and then logout', () => {
-    
+describe('Testing happy-flow Minuc, login, verify state and then logout', () => {    
     it('visit minuc AT url, verify state', () => {    
         cy.visit('https://www1.minuc.se')
             .url().should('include', 'www1.minuc.se')
@@ -7,7 +6,17 @@ describe('Testing happy-flow Minuc, login, verify state and then logout', () => 
 
     it('start login flow and verify state', () => {
         cy.get('.site-header__top .btn').click()
+       /*  cy.wait(5000)
+        //cy.setCookie('SESSION_TOKEN', 'f5r09t3beegf56q23nua48iijl28hvk58aeds72den4um76aqqmetuaa9p7jogs0oovse41sr9ureh')
+        var cookie
+        cy.getCookie('SESSION_TOKEN')
+            .should('exist')
+            .then((c) => {
+            // save cookie until we need it
+            cookie = c
+        }) */
             .url().should('include', 'weblogin/login?')
+        
     })
 
     it('Inside SAAM login, fill out forms and proceed through the flow', () => {        
