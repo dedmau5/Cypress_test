@@ -15,6 +15,11 @@
     "minuc": "npx cypress open "
   },
   "devDependencies": {
+<<<<<<< HEAD
     "cypress": "^8.6.0"
+=======
+    "cypress": "^5.5.0"
+
+>>>>>>> b4638a40f52507ed2e75680663283d523ce6a2ef
   }
 }
